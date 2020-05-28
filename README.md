@@ -5,19 +5,11 @@
 ## 项目结构
 建立文件目录结构
 ````
-- test //我的目录名字
-    - src  // 应用的所有代码
-      - actions     // 处理异步请求
-      - assets      // 静态资源
-      - components  // 公用组件
-      - pages       // 业务逻辑页面
-      - reducers    // reducer 状态处理
-      - util        // 公用方法
-      - App.js  // 相当于Vue中的app.vue文件
-      - index.html  // 项目模板
-      - index.html  // 项目模板
-      - index.js    // 项目入口文件 相当于Vue中的main.js
-    - webpack.config.js // webpack 配置文件
+-resource 
+   -resources ：mxgraph部分的源代码
+   -www : 主要用于editor部分源码
+   -src ：业务逻辑，目前只将mxgraphEditor集成进来
+   -stencil ：存放静态图标模板
 ````
 ## 初始化项目
 在项目的根目录下打开命令行，输入：
