@@ -469,7 +469,7 @@ if (typeof (mxBasePath) !== 'undefined' && mxBasePath.length > 0) {
 
   mxClient.basePath = mxBasePath;
 } else {
-  mxClient.basePath = './resource/resources';
+  mxClient.basePath = './public/resource/resources';
 }
 
 /**

@@ -9,13 +9,13 @@ window.MAX_AREA = window.MAX_AREA || 15000 * 15000;
 window.EXPORT_URL = window.EXPORT_URL || '/export';
 window.SAVE_URL = window.SAVE_URL || '/save';
 window.OPEN_URL = window.OPEN_URL || '/open';
-window.RESOURCES_PATH = window.RESOURCES_PATH || 'resource/www/resources';
+window.RESOURCES_PATH = window.RESOURCES_PATH || 'public/resource/www/resources';
 window.RESOURCE_BASE = window.RESOURCE_BASE || window.RESOURCES_PATH + '/grapheditor';
-window.STENCIL_PATH = window.STENCIL_PATH || 'resource/www/stencils';
-window.IMAGE_PATH = window.IMAGE_PATH || 'resource/www/images';
-window.STYLE_PATH = window.STYLE_PATH || 'resource/www/styles';
-window.CSS_PATH = window.CSS_PATH || 'resource/www/styles';
-window.OPEN_FORM = window.OPEN_FORM || 'resource/www/open.html';
+window.STENCIL_PATH = window.STENCIL_PATH || 'public/resource/www/stencils';
+window.IMAGE_PATH = window.IMAGE_PATH || 'public/resource/www/images';
+window.STYLE_PATH = window.STYLE_PATH || 'public/resource/www/styles';
+window.CSS_PATH = window.CSS_PATH || 'public/resource/www/styles';
+window.OPEN_FORM = window.OPEN_FORM || 'public/resource/www/open.html';
 
 // Sets the base path, the UI language via URL param and configures the
 // supported languages to avoid 404s. The loading of all core language
@@ -24,6 +24,6 @@ window.OPEN_FORM = window.OPEN_FORM || 'resource/www/open.html';
 // files (the special bundle and the default bundle) is disabled to
 // save a GET request. This requires that all resources be present in
 // each properties file since only one file is loaded.
-window.mxBasePath = window.mxBasePath || '../../resources';
+window.mxBasePath = window.mxBasePath || '../../public/resources';
 window.mxLanguage = window.mxLanguage || urlParams['lang'];
 window.mxLanguages = window.mxLanguages || ['de'];

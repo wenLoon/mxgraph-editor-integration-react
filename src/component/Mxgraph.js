@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import './../../resource/resources/index';
-import './../../resource/www/js/Init';
-import './../../resource/www/deflate/pako.min';
-import './../../resource/www/deflate/base64';
-import './../../resource/www/jscolor/jscolor';
-import './../../resource/www/sanitizer/sanitizer.min';
-import './../../resource/www/js/EditorUi';
-import './../../resource/www/js/Editor';
-import './../../resource/www/js/Sidebar';
-import './../../resource/www/js/Graph';
-import './../../resource/www/js/Format';
-import './../../resource/www/js/Shapes';
-import './../../resource/www/js/Actions';
-import './../../resource/www/js/Menus';
-import './../../resource/www/js/Toolbar';
-import './../../resource/www/js/Dialogs';
-import './../../resource/www/styles/grapheditor.css';
+import './../../public/resource/resources/index';
+import './../../public/resource/www/js/Init';
+import './../../public/resource/www/deflate/pako.min';
+import './../../public/resource/www/deflate/base64';
+import './../../public/resource/www/jscolor/jscolor';
+import './../../public/resource/www/sanitizer/sanitizer.min';
+import './../../public/resource/www/js/EditorUi';
+import './../../public/resource/www/js/Editor';
+import './../../public/resource/www/js/Sidebar';
+import './../../public/resource/www/js/Graph';
+import './../../public/resource/www/js/Format';
+import './../../public/resource/www/js/Shapes';
+import './../../public/resource/www/js/Actions';
+import './../../public/resource/www/js/Menus';
+import './../../public/resource/www/js/Toolbar';
+import './../../public/resource/www/js/Dialogs';
+import './../../public/resource/www/styles/grapheditor.css';
+import './mxgraph.css';
 
 function EditorUI() {
     /* js connect body element with class */
@@ -35,7 +36,7 @@ function EditorUI() {
         themes[Graph.prototype.defaultThemeName] = xhr[1].getDocumentElement();
 
         // Main
-        new EditorUi(new Editor(urlParams['chrome'] == '0', themes));
+        new EditorUi(new Editor(urlParams['chrome'] == '0', themes), document.getElementById('mymxgraphbody'));
     }, function () {
         document.body.innerHTML = '<center style="margin-top:10%;">Error loading resource files. Please check browser console.</center>';
     });
@@ -48,7 +49,7 @@ function Mxgraph() {
     }, [])
 
     return (
-        <div>
+        <div className="mymxgraphbody" id="mymxgraphbody">
             Mxgraph
         </div>
     )

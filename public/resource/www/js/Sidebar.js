@@ -143,7 +143,7 @@ Sidebar.prototype.dropTargetDelay = 200;
 /**
  * Specifies the URL of the gear image.
  */
-Sidebar.prototype.gearImage = STENCIL_PATH + '/clipart/Gear_128x128.png';
+Sidebar.prototype.gearImage = STENCIL_PATH + 'resource/www/stencils';
 
 /**
  * Specifies the width of the thumbnails.
