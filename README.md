@@ -5,19 +5,11 @@
 ## 项目结构
 建立文件目录结构
 ````
-- test //我的目录名字
-    - src  // 应用的所有代码
-      - actions     // 处理异步请求
-      - assets      // 静态资源
-      - components  // 公用组件
-      - pages       // 业务逻辑页面
-      - reducers    // reducer 状态处理
-      - util        // 公用方法
-      - App.js  // 相当于Vue中的app.vue文件
-      - index.html  // 项目模板
-      - index.html  // 项目模板
-      - index.js    // 项目入口文件 相当于Vue中的main.js
-    - webpack.config.js // webpack 配置文件
+-resource 
+   -resources ：mxgraph部分的源代码
+   -www : 主要用于editor部分源码
+   -src ：业务逻辑，目前只将mxgraphEditor集成进来
+   -stencil ：存放静态图标模板
 ````
 ## 初始化项目
 在项目的根目录下打开命令行，输入：
@@ -220,66 +212,4 @@ const HtmlPlugin = require('html-webpack-plugin');
       "@babel/plugin-proposal-class-properties",
         ]
 }
-
-````
-## 编写App.js文件
-````
-import React,{Component} from 'react';
-
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
-    }
-    render() {
-        return (
-            <div className="main">
-                <p>Hello World</p>
-                <div className="box">我是第二个div</div>
-            </div>
-        );
-    }
-}
-
-export default App;
-
-// ReactDom.render(<App />,document.getElementById('root'));
-````
-## 根目录创建App.scss文件，并编写App.scss
-````
-.main {
-  background: pink;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  .box {
-    background:skyblue;
-  }
-}
-````
-## 将样式文件引入App.js
-````
-import './App.scss'
-````
-## 编写index.js
-````
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
-
-````
-## 启动项目
-````
-npm run dev
-````
-如果在这过程中有出现其他的报错信息，百度都可以找到答案！也可以参考下方代码链接，对比有哪些不一样的地方
-[https://github.com/menglin1997/react-demo](https://github.com/menglin1997/react-demo)
-
-启动后如图所示：
-![样式.jpg](https://upload-images.jianshu.io/upload_images/16360239-38e1d43f07ee39cb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-"# mxgraph-editor-integration-react" 
+ 
